@@ -16,7 +16,7 @@ section{
 }
 
 .w-99{
-    width: 99% !important;
+    max-width: 99% !important;
 }
 
 .text-justify{
@@ -47,7 +47,7 @@ h2:after {
     margin: 20px auto;
 }
 
-.bg-green, .btn-outline-secondary:hover{
+.bg-green, .btn-outline-secondary:hover, .dropdown-menu,.dropdown-item:hover{
     background-color:#A19574 !important;
 }
 
@@ -58,7 +58,7 @@ h2:after {
 h3, .color-green, .btn-outline-secondary, .text-dark:hover{
     color: #A19574 !important;
 }
-.border-green, .btn-outline-secondary, .btn-outline-secondary:hover{
+.border-green, .btn-outline-secondary, .btn-outline-secondary:hover, .dropdown-menu{
     border-color: #A19574 !important;
 }
 
@@ -71,17 +71,18 @@ footer p{
     padding: 0 20px;
   }
   
-.nav-link, .navbar-brand {
+.nav-link, .navbar-brand, .dropdown-item{
     text-transform: uppercase;
+    text-align: center !important;
 
 }
 
-.nav-link, .btn-outline-secondary:hover{
+.nav-link, .btn-outline-secondary:hover, .dropdown-item{
     
     color:rgba(255, 255, 255, 0.5) !important;
 }
 
-.nav-link:hover{
+.nav-link:hover, .dropdown-item:hover{
     color:rgba(0, 0, 0, 0.5) !important;
 }
 
@@ -108,17 +109,38 @@ footer p{
 
 .slick-prev:before, .slick-next:before {
     font-size: 30px !important;
+   
+}
+
+
+
+.slick-prev:before, .slick-next:before, .slick-dots li.slick-active button:before {
     color: #A19574 !important;
    
 }
 
+.slick-dots li.slick-active button:before{
+    opacity: 1 !important;
+}
+
+.slick-dots li button:before{
+    color: black !important;
+    opacity: 0.15 !important;
+}
+
+
 .slick-prev {
     left: -35px !important;
+    z-index: 1;
 }
 
 .card-title{
     font-style: italic;
     font-weight: 500;
+}
+
+.container .py-5{
+    padding-top: 4rem!important;
 }
 
 @media screen and (max-width: 1199.5px) and (min-width: 768px){
@@ -133,4 +155,25 @@ footer p{
         margin-top: -0.7rem;
         margin-bottom: 0.3rem;
     }
+    
 }
+@media screen and (max-width: 690px){
+    .w-99{
+        max-width: 80% !important;
+    }
+
+    .slick-prev {
+        left: 0.5rem !important;
+    }
+
+    .slick-next {
+        right: 1rem !important;
+    }
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+

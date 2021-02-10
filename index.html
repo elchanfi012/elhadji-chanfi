@@ -34,9 +34,18 @@
             <li class="nav-item">
               <a class="nav-link" href="#about">À propos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Compétences</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#skills" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Compétences
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#languages">Langages</a></li>
+                <li><a class="dropdown-item" href="#frameworks">Frameworks et librairies</a></li>
+                <li><a class="dropdown-item" href="#tools">Cms et outils</a></li>
+                <li><a class="dropdown-item" href="#managements">Gestion de projet</a></li>
+              </ul>
             </li>
+           
             <li class="nav-item">
               <a class="nav-link" href="#education">Parcours</a>
             </li>
@@ -131,9 +140,9 @@
       <h2>Compétences</h2>
       <div class="container">
         
-        <div class="row py-5">
+        <div class="row py-5" id="languages">
           <div class="card border-green px-0 shadow-lg rounded">
-            <h3 class="card-header color-green border-green">Langages</h3>
+            <h3 class="card-header color-green border-green" >Langages</h3>
             <div class="card-body ">
               <div class="row py-3">
                 <div class="col-md-4">
@@ -180,9 +189,9 @@
         </div>
   
         
-        <div class="row py-5 ">
+        <div class="row py-5" id="frameworks">
           <div class="card border-green px-0 shadow-lg rounded">
-            <h3 class="card-header color-green border-green">Frameworks et librairies</h3>
+            <h3 class="card-header color-green border-green" >Frameworks et librairies</h3>
             <div class="card-body">
               <div class="row py-3">
                 <div class="col-md-3">
@@ -239,7 +248,7 @@
       
         </div>
        
-        <div class="row py-5">
+        <div class="row py-5" id="tools">
           <div class="card border-green px-0 shadow-lg rounded">
             <h3 class="card-header color-green border-green">Cms et outils </h3>
             <div class="card-body">
@@ -276,8 +285,8 @@
           </div>
           
         </div>
-        
-        <div class="row py-5">
+         
+        <div class="row py-5"  id="managements">
           <div class="card border-green px-0 shadow-lg rounded">
             <h3 class="card-header color-green border-green">Gestion de projet</h3>
             <div class="card-body">
